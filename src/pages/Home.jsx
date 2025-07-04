@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { 
   BookOpen, 
@@ -51,6 +52,7 @@ const Home = () => {
 
   const chapters = [
     {
+      id: 'fundamentals',
       title: 'Temel İlkeler',
       subtitle: 'Pediatrik anamnez ve fizik muayene',
       progress: 85,
@@ -60,6 +62,7 @@ const Home = () => {
       color: 'primary'
     },
     {
+      id: 'development',
       title: 'Gelişimsel Değerlendirme',
       subtitle: 'Büyüme ve gelişim basamakları',
       progress: 60,
@@ -69,6 +72,7 @@ const Home = () => {
       color: 'secondary'
     },
     {
+      id: 'systems',
       title: 'Sistem Semiyolojisi',
       subtitle: 'Organ sistemlerine göre yaklaşım',
       progress: 40,
@@ -78,6 +82,7 @@ const Home = () => {
       color: 'success'
     },
     {
+      id: 'tools',
       title: 'Pratik Araçlar',
       subtitle: 'Skorlama sistemleri ve hesaplayıcılar',
       progress: 90,
@@ -115,12 +120,16 @@ const Home = () => {
                 Hekimler için güvenilir bilgi kaynağı ve pratik araçlar.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button size="lg" icon={BookOpen}>
-                  Eğitime Başla
-                </Button>
-                <Button size="lg" variant="outline" icon={Target}>
-                  Araçları Keşfet
-                </Button>
+                <Link to="/chapters">
+                  <Button size="lg" icon={BookOpen}>
+                    Eğitime Başla
+                  </Button>
+                </Link>
+                <Link to="/chapters">
+                  <Button size="lg" variant="outline" icon={Target}>
+                    Araçları Keşfet
+                  </Button>
+                </Link>
               </div>
             </motion.div>
           </div>
@@ -180,40 +189,42 @@ const Home = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
               >
-                <Card hover className="relative overflow-hidden">
-                  <div className="flex items-start space-x-4">
-                    <div className={`w-12 h-12 bg-${chapter.color}-100 rounded-lg flex items-center justify-center flex-shrink-0`}>
-                      <chapter.icon className={`w-6 h-6 text-${chapter.color}-600`} />
-                    </div>
-                    <div className="flex-1">
-                      <Card.Title className="mb-1">{chapter.title}</Card.Title>
-                      <Card.Subtitle className="mb-3">{chapter.subtitle}</Card.Subtitle>
-                      
-                      <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
-                        <span>{chapter.topics} konu</span>
-                        <span>{chapter.duration}</span>
+                <Link to={`/chapters/${chapter.id}`}>
+                  <Card hover className="relative overflow-hidden">
+                    <div className="flex items-start space-x-4">
+                      <div className={`w-12 h-12 bg-${chapter.color}-100 rounded-lg flex items-center justify-center flex-shrink-0`}>
+                        <chapter.icon className={`w-6 h-6 text-${chapter.color}-600`} />
                       </div>
-                      
-                      <div className="flex items-center justify-between">
-                        <div className="flex-1 mr-4">
-                          <div className="flex items-center justify-between text-sm mb-1">
-                            <span className="text-gray-600">İlerleme</span>
-                            <span className="font-medium">{chapter.progress}%</span>
-                          </div>
-                          <div className="progress-bar h-2">
-                            <div 
-                              className="progress-fill" 
-                              style={{ width: `${chapter.progress}%` }}
-                            ></div>
-                          </div>
+                      <div className="flex-1">
+                        <Card.Title className="mb-1">{chapter.title}</Card.Title>
+                        <Card.Subtitle className="mb-3">{chapter.subtitle}</Card.Subtitle>
+                        
+                        <div className="flex items-center space-x-4 text-sm text-gray-500 mb-3">
+                          <span>{chapter.topics} konu</span>
+                          <span>{chapter.duration}</span>
                         </div>
-                        <Button variant="ghost" size="sm" icon={ArrowRight} iconPosition="right">
-                          Devam Et
-                        </Button>
+                        
+                        <div className="flex items-center justify-between">
+                          <div className="flex-1 mr-4">
+                            <div className="flex items-center justify-between text-sm mb-1">
+                              <span className="text-gray-600">İlerleme</span>
+                              <span className="font-medium">{chapter.progress}%</span>
+                            </div>
+                            <div className="progress-bar h-2">
+                              <div 
+                                className="progress-fill" 
+                                style={{ width: `${chapter.progress}%` }}
+                              ></div>
+                            </div>
+                          </div>
+                          <Button variant="ghost" size="sm" icon={ArrowRight} iconPosition="right">
+                            Devam Et
+                          </Button>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </Card>
+                  </Card>
+                </Link>
               </motion.div>
             ))}
           </div>
