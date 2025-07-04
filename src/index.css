@@ -88,73 +88,141 @@
 /* Touch-Friendly Components */
 @layer components {
   .btn {
-    @apply inline-flex items-center justify-center px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 min-h-[44px] min-w-[44px];
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border-radius: 0.5rem;
+    transition: all 0.2s;
+    min-height: 44px;
+    min-width: 44px;
+    border: none;
+    cursor: pointer;
   }
   
   .btn-lg {
-    @apply px-6 py-4 text-base min-h-[48px];
+    padding: 1rem 1.5rem;
+    font-size: 1rem;
+    min-height: 48px;
   }
   
   .btn-primary {
-    @apply bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+    background-color: #4f46e5;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #3730a3;
   }
   
   .btn-secondary {
-    @apply bg-gray-100 text-gray-900 hover:bg-gray-200 focus:ring-gray-500;
+    background-color: #f3f4f6;
+    color: #111827;
+  }
+  
+  .btn-secondary:hover {
+    background-color: #e5e7eb;
   }
   
   .btn-outline {
-    @apply border-2 border-gray-300 text-gray-700 hover:bg-gray-50 focus:ring-gray-500;
+    border: 2px solid #d1d5db;
+    color: #374151;
+    background-color: transparent;
+  }
+  
+  .btn-outline:hover {
+    background-color: #f9fafb;
   }
   
   .btn-ghost {
-    @apply text-primary-600 hover:bg-primary-50 focus:ring-primary-500;
+    color: #4f46e5;
+    background-color: transparent;
+  }
+  
+  .btn-ghost:hover {
+    background-color: #eef2ff;
   }
   
   .input {
-    @apply block w-full px-4 py-3 text-sm border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 min-h-[44px];
+    display: block;
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    min-height: 44px;
+  }
+  
+  .input:focus {
+    outline: none;
+    border-color: #4f46e5;
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   }
   
   .label {
-    @apply block text-sm font-medium text-gray-700 mb-1;
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 0.25rem;
   }
   
   .card {
-    @apply bg-white border border-gray-200 rounded-xl shadow-sm;
+    background-color: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
   }
   
   .card-hover {
-    @apply hover:shadow-md transition-all duration-200;
+    transition: all 0.2s;
+  }
+  
+  .card-hover:hover {
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   }
   
   .glass {
-    @apply bg-white/80 backdrop-blur-sm border border-white/20;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .text-gradient {
-    @apply bg-gradient-to-r from-primary-600 to-secondary-600 bg-clip-text text-transparent;
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
   }
   
   .progress-bar {
-    @apply bg-gray-200 rounded-full overflow-hidden;
+    background-color: #e5e7eb;
+    border-radius: 9999px;
+    overflow: hidden;
   }
   
   .progress-fill {
-    @apply h-full bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300;
+    height: 100%;
+    background: linear-gradient(to right, #4f46e5, #7c3aed);
+    transition: all 0.3s;
   }
   
   /* Mobile-specific styles */
   @media (max-width: 768px) {
     .mobile-padding {
-      @apply px-4 py-2;
+      padding: 0.5rem 1rem;
     }
     
     .mobile-text {
-      @apply text-sm;
+      font-size: 0.875rem;
     }
     
     .mobile-button {
-      @apply py-4 px-6 text-base;
+      padding: 1rem 1.5rem;
+      font-size: 1rem;
     }
   }
 }
@@ -162,7 +230,11 @@
 /* Accessibility & UX Improvements */
 @layer utilities {
   .focus-ring {
-    @apply focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500;
+    outline: none;
+  }
+  
+  .focus-ring:focus {
+    box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
   }
   
   .safe-area-inset {
