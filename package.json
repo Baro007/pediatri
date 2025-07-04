@@ -1,13 +1,35 @@
 {
   "name": "pedisemio",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "type": "module",
+  "description": "Kanıta dayalı, interaktif ve kapsamlı pediatrik semiyoloji eğitimi. Hekimler için güvenilir bilgi kaynağı ve pratik araçlar.",
+  "keywords": [
+    "pediatrik",
+    "semiyoloji",
+    "tıp",
+    "eğitim",
+    "quiz",
+    "interaktif"
+  ],
+  "author": "PediaSemio Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Baro007/pediatri.git"
+  },
+  "homepage": "https://baro007.github.io/pediatri",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "npm run build && gh-pages -d dist",
+    "predeploy": "npm run build",
+    "test": "npm run lint && npm run build",
+    "serve": "vite preview",
+    "clean": "rm -rf dist node_modules/.cache",
+    "analyze": "vite build --mode analyze"
   },
   "dependencies": {
     "@headlessui/react": "^2.2.4",
@@ -23,13 +45,32 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.29.0",
+    "@tailwindcss/postcss": "^4.1.11",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.1.6",
     "@vitejs/plugin-react": "^4.5.2",
     "eslint": "^9.29.0",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
+    "gh-pages": "^6.3.0",
     "globals": "^16.2.0",
+    "terser": "^5.43.1",
     "vite": "^7.0.0"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
