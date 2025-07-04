@@ -9,6 +9,73 @@
       "color": "primary",
       "difficulty": "Başlangıç",
       "estimatedTime": "45 dk",
+      "quizQuestions": [
+        {
+          "id": "q1",
+          "question": "Pediatrik anamnez alma sürecinde 'üçlü iletişim' kavramı kimler arasındaki etkileşimi ifade eder?",
+          "answers": [
+            "Hekim, hemşire ve çocuk",
+            "Hekim, ebeveyn ve çocuk",
+            "Anne, baba ve çocuk",
+            "Hekim, ebeveyn ve büyükanne"
+          ],
+          "correctAnswer": 1,
+          "explanation": "Pediatrik anamnezde üçlü iletişim, hekim, ebeveyn ve çocuk arasındaki karmaşık ve dinamik etkileşimi ifade eder. Bu yaklaşım çocuğun yaşına uygun katılımını sağlar.",
+          "difficulty": "Kolay"
+        },
+        {
+          "id": "q2",
+          "question": "1-5 yaş arası çocuklarda fizik muayene yaklaşımı nasıl olmalıdır?",
+          "answers": [
+            "Sert ve otoriterdir",
+            "Oyuna dönüştürülmelidir",
+            "Tamamen sessiz yapılmalıdır",
+            "Hızlı ve kısa tutulmalıdır"
+          ],
+          "correctAnswer": 1,
+          "explanation": "1-5 yaş grubu çocuklar egosantrik düşünce yapısındadır. Muayene aletlerini oyuna dönüştürmek ve basit seçenekler sunmak işbirliğini artırır.",
+          "difficulty": "Kolay"
+        },
+        {
+          "id": "q3",
+          "question": "Pediatrik fizik muayenede en doğru yaklaşım hangisidir?",
+          "answers": [
+            "Her zaman baştan ayağa sistematik muayene",
+            "En rahatsız edici kısımdan başlamak",
+            "En az rahatsız edenden en çok rahatsız edene",
+            "Sadece şikayet edilen bölgeyi muayene etmek"
+          ],
+          "correctAnswer": 2,
+          "explanation": "Çocuklarda işbirliğini sürdürmek için en az rahatsız edenden en çok rahatsız edene prensibi uygulanmalıdır. Gözlem-oskültasyon-palpasyon sırası ideal.",
+          "difficulty": "Orta"
+        },
+        {
+          "id": "q4",
+          "question": "Bebeklerde hipotansiyon sınırı nedir?",
+          "answers": [
+            "< 50 mmHg",
+            "< 60 mmHg",
+            "< 70 mmHg",
+            "< 80 mmHg"
+          ],
+          "correctAnswer": 2,
+          "explanation": "1-12 aylık bebekler için hipotansiyon sınırı < 70 mmHg'dır. Yenidoğanlarda bu sınır < 60 mmHg'dır.",
+          "difficulty": "Orta"
+        },
+        {
+          "id": "q5",
+          "question": "Büyüme takibinde hangi durum alarm vericidir?",
+          "answers": [
+            "50. persentilin altında olmak",
+            "İki ana persentil çizgisini kesmek",
+            "25. persentilde sabit kalmak",
+            "Yaşıtlarından kısa olmak"
+          ],
+          "correctAnswer": 1,
+          "explanation": "İlk 2-3 yaş dışında iki veya daha fazla ana persentil çizgisini kesme alarm vericidir. Tek ölçüm değil, trend önemlidir.",
+          "difficulty": "İleri"
+        }
+      ],
       "topics": [
         {
           "id": "anamnesis",
@@ -141,6 +208,73 @@
       "color": "secondary",
       "difficulty": "Orta",
       "estimatedTime": "30 dk",
+      "quizQuestions": [
+        {
+          "id": "q1",
+          "question": "12 aylık bir çocuk hangi gelişim basamağını göstermelidir?",
+          "answers": [
+            "Desteksiz yürümek",
+            "Olgun kıskaç kavrama",
+            "3 kelimelik cümle kurmak",
+            "Paralel oyun oynamak"
+          ],
+          "correctAnswer": 1,
+          "explanation": "12 ayda olgun kıskaç kavrama (pincer grasp) gelişir. Ayrıca mama/dada anlamlı şekilde söyler ve tek başına birkaç adım atar.",
+          "difficulty": "Kolay"
+        },
+        {
+          "id": "q2",
+          "question": "Otizm spektrum bozukluğu için M-CHAT-R kaç ay ve üzerinde uygulanır?",
+          "answers": [
+            "12 ay",
+            "16 ay",
+            "18 ay",
+            "24 ay"
+          ],
+          "correctAnswer": 1,
+          "explanation": "M-CHAT-R, otizm spektrum bozukluğu için 16-30 ay arasındaki çocuklarda uygulanan tarama testidir.",
+          "difficulty": "Orta"
+        },
+        {
+          "id": "q3",
+          "question": "24 aylık çocukta alarm veren durum hangisidir?",
+          "answers": [
+            "50 kelime söylemek",
+            "İki kelimelik cümle kurmak",
+            "10 kelimeden az sözcük",
+            "Paralel oyun oynamak"
+          ],
+          "correctAnswer": 2,
+          "explanation": "24 ayda çocuk en az 50 kelime söylemeli ve 2 kelimelik cümleler kurmalıdır. 10 kelimeden az konuşma alarm vericidir.",
+          "difficulty": "Orta"
+        },
+        {
+          "id": "q4",
+          "question": "18 ayda gösterilen gelişim basamağı hangisidir?",
+          "answers": [
+            "Merdiven çıkabilme",
+            "Kule yapabilme (3-4 küp)",
+            "Kaşık kullanabilme",
+            "Hepsi"
+          ],
+          "correctAnswer": 3,
+          "explanation": "18 ayda çocuk merdiven çıkabilir, 3-4 küpten kule yapabilir ve kaşık kullanmaya başlar. Bu yaş kritik gelişim dönemidir.",
+          "difficulty": "İleri"
+        },
+        {
+          "id": "q5",
+          "question": "Febrili konvülziyon öyküsü olan çocuğun ailesine hangi bilgi verilmelidir?",
+          "answers": [
+            "Tekrarlama riski %30-50'dir",
+            "Epilepsi gelişme riski yüksektir",
+            "Aşı yapılmamalıdır",
+            "Motor gelişim geri kalacaktır"
+          ],
+          "correctAnswer": 0,
+          "explanation": "Febrili konvülziyon tekrarlama riski %30-50 arasındadır. Çoğu çocukta uzun dönem sorun olmaz ve epilepsi riski artmaz.",
+          "difficulty": "İleri"
+        }
+      ],
       "topics": [
         {
           "id": "developmental-milestones",
