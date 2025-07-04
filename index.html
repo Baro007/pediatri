@@ -1,13 +1,199 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="tr">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    
+    <!-- PWA Meta Tags -->
+    <meta name="description" content="Kanıta dayalı, interaktif ve kapsamlı pediatrik semiyoloji eğitimi. Hekimler için güvenilir bilgi kaynağı ve pratik araçlar." />
+    <meta name="keywords" content="pediatrik semiyoloji, tıp eğitimi, pediatri, semiyoloji, quiz, interaktif eğitim" />
+    <meta name="author" content="PediaSemio Team" />
+    <meta name="robots" content="index, follow" />
+    
+    <!-- Theme Colors -->
+    <meta name="theme-color" content="#2563eb" />
+    <meta name="msapplication-navbutton-color" content="#2563eb" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    
+    <!-- PWA Manifest -->
+    <link rel="manifest" href="/manifest.json" />
+    
+    <!-- Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="/icons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/icons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/icons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/icons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/icons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon-180x180.png" />
+    
+    <!-- Apple Web App -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="PediaSemio" />
+    
+    <!-- Microsoft -->
+    <meta name="msapplication-TileColor" content="#2563eb" />
+    <meta name="msapplication-TileImage" content="/icons/mstile-144x144.png" />
+    <meta name="msapplication-config" content="/browserconfig.xml" />
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/icons/favicon-16x16.png" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="PediaSemio - Pediatrik Semiyoloji Rehberi" />
+    <meta property="og:description" content="Kanıta dayalı, interaktif ve kapsamlı pediatrik semiyoloji eğitimi. Hekimler için güvenilir bilgi kaynağı ve pratik araçlar." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://pedisemio.com" />
+    <meta property="og:image" content="/icons/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:locale" content="tr_TR" />
+    <meta property="og:site_name" content="PediaSemio" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="PediaSemio - Pediatrik Semiyoloji Rehberi" />
+    <meta name="twitter:description" content="Kanıta dayalı, interaktif ve kapsamlı pediatrik semiyoloji eğitimi. Hekimler için güvenilir bilgi kaynağı ve pratik araçlar." />
+    <meta name="twitter:image" content="/icons/twitter-image.png" />
+    <meta name="twitter:site" content="@pedisemio" />
+    <meta name="twitter:creator" content="@pedisemio" />
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
+    <!-- Security -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+    <meta http-equiv="X-Frame-Options" content="DENY" />
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+    
+    <!-- Performance -->
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "PediaSemio",
+      "description": "Kanıta dayalı, interaktif ve kapsamlı pediatrik semiyoloji eğitimi. Hekimler için güvenilir bilgi kaynağı ve pratik araçlar.",
+      "url": "https://pedisemio.com",
+      "applicationCategory": "EducationalApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "softwareVersion": "1.0.0",
+      "datePublished": "2024-01-01",
+      "author": {
+        "@type": "Organization",
+        "name": "PediaSemio Team"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+    
+    <title>PediaSemio - Pediatrik Semiyoloji Rehberi</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Service Worker Registration -->
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('/sw.js')
+            .then((registration) => {
+              console.log('SW registered: ', registration);
+              
+              // Check for updates
+              registration.addEventListener('updatefound', () => {
+                const newWorker = registration.installing;
+                newWorker.addEventListener('statechange', () => {
+                  if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // New content available
+                    if (confirm('Yeni içerik mevcut! Sayfayı yenilemek istiyor musunuz?')) {
+                      window.location.reload();
+                    }
+                  }
+                });
+              });
+            })
+            .catch((registrationError) => {
+              console.log('SW registration failed: ', registrationError);
+            });
+        });
+      }
+      
+      // Install prompt
+      let deferredPrompt;
+      window.addEventListener('beforeinstallprompt', (e) => {
+        // Prevent Chrome 67 and earlier from automatically showing the prompt
+        e.preventDefault();
+        // Stash the event so it can be triggered later
+        deferredPrompt = e;
+        
+        // Show custom install button
+        const installButton = document.getElementById('install-button');
+        if (installButton) {
+          installButton.style.display = 'block';
+          installButton.addEventListener('click', () => {
+            // Show the prompt
+            deferredPrompt.prompt();
+            // Wait for the user to respond to the prompt
+            deferredPrompt.userChoice.then((choiceResult) => {
+              if (choiceResult.outcome === 'accepted') {
+                console.log('User accepted the A2HS prompt');
+              } else {
+                console.log('User dismissed the A2HS prompt');
+              }
+              deferredPrompt = null;
+            });
+          });
+        }
+      });
+      
+      // Track app install
+      window.addEventListener('appinstalled', (evt) => {
+        console.log('App installed');
+      });
+      
+      // Notification permission request
+      if ('Notification' in window && 'serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+          if (Notification.permission === 'default') {
+            // Show notification permission UI after user interaction
+            setTimeout(() => {
+              if (confirm('Yeni içerik ve güncellemeler için bildirim almak istiyor musunuz?')) {
+                Notification.requestPermission();
+              }
+            }, 5000);
+          }
+        });
+      }
+    </script>
+    
+    <!-- Offline fallback -->
+    <noscript>
+      <div style="text-align: center; padding: 2rem;">
+        <h2>JavaScript Gerekli</h2>
+        <p>Bu uygulama JavaScript gerektirir. Lütfen tarayıcınızda JavaScript'i etkinleştirin.</p>
+      </div>
+    </noscript>
   </body>
 </html>

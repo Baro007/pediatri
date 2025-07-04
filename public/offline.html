@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Çevrimdışı - PediaSemio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+
+        .container {
+            max-width: 480px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 2rem;
+            background: #f3f4f6;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #6b7280;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .features {
+            background: #f9fafb;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            text-align: left;
+        }
+
+        .features h3 {
+            font-size: 1.125rem;
+            font-weight: 600;
+            color: #1f2937;
+            margin-bottom: 1rem;
+        }
+
+        .features ul {
+            list-style: none;
+            space-y: 0.5rem;
+        }
+
+        .features li {
+            display: flex;
+            align-items: center;
+            color: #6b7280;
+            font-size: 0.875rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .features li::before {
+            content: "✓";
+            color: #10b981;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+
+        .button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .button:hover {
+            background: #1d4ed8;
+            transform: translateY(-2px);
+        }
+
+        .button:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .status {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-size: 0.875rem;
+            margin-top: 1rem;
+        }
+
+        .status.offline {
+            background: #fef2f2;
+            color: #dc2626;
+        }
+
+        .status.online {
+            background: #f0fdf4;
+            color: #16a34a;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+        }
+
+        .logo-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #2563eb, #0ea5e9);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+            margin-right: 1rem;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #2563eb, #0ea5e9);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        @media (max-width: 640px) {
+            .container {
+                padding: 2rem 1.5rem;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Logo -->
+        <div class="logo">
+            <div class="logo-icon">P</div>
+            <div class="logo-text">PediaSemio</div>
+        </div>
+
+        <!-- Offline Icon -->
+        <div class="icon">
+            📱
+        </div>
+
+        <!-- Title -->
+        <h1>İnternet Bağlantısı Yok</h1>
+
+        <!-- Description -->
+        <p>
+            Şu anda çevrimdışısınız, ancak PediaSemio'nun bazı özelliklerini kullanmaya devam edebilirsiniz.
+        </p>
+
+        <!-- Offline Features -->
+        <div class="features">
+            <h3>Çevrimdışı Kullanılabilir Özellikler:</h3>
+            <ul>
+                <li>Önbelleğe alınmış bölümleri okuma</li>
+                <li>Daha önceki quiz sonuçlarını görüntüleme</li>
+                <li>Kaydedilen notlarınıza erişim</li>
+                <li>Temel navigasyon</li>
+            </ul>
+        </div>
+
+        <!-- Connection Status -->
+        <div id="status" class="status offline">
+            <span>🔴</span>
+            <span>Çevrimdışı</span>
+        </div>
+
+        <!-- Retry Button -->
+        <button class="button" onclick="checkConnection()">
+            <span>🔄</span>
+            <span>Yeniden Dene</span>
+        </button>
+    </div>
+
+    <script>
+        // Check online status
+        function updateStatus() {
+            const statusEl = document.getElementById('status');
+            if (navigator.onLine) {
+                statusEl.className = 'status online';
+                statusEl.innerHTML = '<span>🟢</span><span>Çevrimiçi</span>';
+                // Redirect to home if online
+                setTimeout(() => {
+                    window.location.href = '/';
+                }, 1000);
+            } else {
+                statusEl.className = 'status offline';
+                statusEl.innerHTML = '<span>🔴</span><span>Çevrimdışı</span>';
+            }
+        }
+
+        function checkConnection() {
+            const button = document.querySelector('.button');
+            button.disabled = true;
+            button.innerHTML = '<span>⏳</span><span>Kontrol Ediliyor...</span>';
+            
+            // Try to fetch a small resource
+            fetch('/manifest.json', { cache: 'no-store' })
+                .then(() => {
+                    updateStatus();
+                })
+                .catch(() => {
+                    button.disabled = false;
+                    button.innerHTML = '<span>🔄</span><span>Yeniden Dene</span>';
+                });
+        }
+
+        // Listen for online/offline events
+        window.addEventListener('online', updateStatus);
+        window.addEventListener('offline', updateStatus);
+
+        // Initial status check
+        updateStatus();
+
+        // Auto-check connection every 30 seconds
+        setInterval(() => {
+            if (!navigator.onLine) {
+                checkConnection();
+            }
+        }, 30000);
+    </script>
+</body>
+</html> 
