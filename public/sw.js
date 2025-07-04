@@ -1,13 +1,12 @@
 // Service Worker for PediaSemio PWA
 const CACHE_NAME = 'pedisemio-v1.0.0';
 const urlsToCache = [
-  '/',
-  '/chapters',
-  '/about',
-  '/src/index.css',
-  '/src/main.jsx',
-  '/src/App.jsx',
-  '/src/data/chapters.json',
+  '/pediatri/',
+  '/pediatri/chapters',
+  '/pediatri/about',
+  '/pediatri/index.html',
+  '/pediatri/manifest.json',
+  '/pediatri/offline.html',
   // Add more critical resources
 ];
 
@@ -81,7 +80,7 @@ self.addEventListener('fetch', (event) => {
         }).catch(() => {
           // If both cache and network fail, show offline page
           if (event.request.destination === 'document') {
-            return caches.match('/offline.html');
+            return caches.match('/pediatri/offline.html');
           }
         });
       })
@@ -132,7 +131,7 @@ self.addEventListener('notificationclick', (event) => {
   if (event.action === 'explore') {
     // Open the app
     event.waitUntil(
-      clients.openWindow('/')
+      clients.openWindow('/pediatri/')
     );
   } else if (event.action === 'close') {
     // Just close the notification
@@ -140,7 +139,7 @@ self.addEventListener('notificationclick', (event) => {
   } else {
     // Default action - open the app
     event.waitUntil(
-      clients.openWindow('/')
+      clients.openWindow('/pediatri/')
     );
   }
 });
