@@ -3,7 +3,13 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Comprehensive pediatric semiology application for medical professionals",
-  "keywords": ["pediatrics", "medical", "semiology", "healthcare", "clinical"],
+  "keywords": [
+    "pediatrics",
+    "medical",
+    "semiology",
+    "healthcare",
+    "clinical"
+  ],
   "author": "Pediatri Medical Team",
   "license": "MIT",
   "homepage": "https://pediatri.netlify.app",
@@ -20,13 +26,18 @@
   },
   "dependencies": {
     "@headlessui/react": "^1.7.19",
+    "@heroicons/react": "^2.2.0",
+    "@types/node": "^24.0.10",
     "chart.js": "^4.4.1",
     "clsx": "^2.1.0",
+    "eslint-plugin-react": "^7.37.5",
+    "globals": "^16.3.0",
     "react": "^18.2.0",
     "react-chartjs-2": "^5.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.26.0",
     "tailwind-merge": "^2.2.1",
+    "typescript-eslint": "^8.35.1",
     "zustand": "^4.5.0"
   },
   "devDependencies": {
