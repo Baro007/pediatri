@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the medical application */
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8fafc;
+}
+
+@layer components {
+  .medical-card {
+    @apply bg-white rounded-xl shadow-sm border border-slate-200 p-6 transition-all duration-300 hover:shadow-md;
+  }
+  
+  .medical-button {
+    @apply bg-teal-600 text-white font-semibold py-2 px-4 rounded-lg hover:bg-teal-700 transition-colors focus:outline-none focus:ring-2 focus:ring-teal-500 focus:ring-offset-2;
+  }
+  
+  .medical-input {
+    @apply border border-slate-300 rounded-lg px-3 py-2 focus:outline-none focus:ring-2 focus:ring-teal-500 focus:border-teal-500;
+  }
+  
+  .medical-nav-link {
+    @apply flex items-center px-4 py-3 rounded-lg transition-colors font-medium text-slate-700 hover:bg-slate-100;
+  }
+  
+  .medical-nav-link.active {
+    @apply bg-teal-600 text-white hover:bg-teal-700;
+  }
+  
+  .medical-red-flag {
+    @apply bg-red-50 border-l-4 border-red-400 p-4 rounded-r-lg;
+  }
+  
+  .medical-pearl {
+    @apply bg-yellow-50 border-l-4 border-yellow-400 p-4 rounded-r-lg;
+  }
+  
+  .medical-deep-dive {
+    @apply bg-blue-50 border-l-4 border-blue-400 p-4 rounded-r-lg;
+  }
+}
+
+/* Animation for content transitions */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Chart container responsive sizing */
+.chart-container {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  height: 300px;
+}
+
+@media (min-width: 768px) {
+  .chart-container {
+    height: 350px;
+  }
+}
+
+/* Custom scrollbar for sidebar */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 2px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Print styles for medical content */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .medical-card {
+    box-shadow: none;
+    border: 1px solid #e5e7eb;
+    break-inside: avoid;
+  }
+}
