@@ -99,3 +99,64 @@ body {
     break-inside: avoid;
   }
 }
+/* Layout fixes: improved spacing and mobile navigation - Tue Jul  8 14:41:21 +03 2025 */
+
+/* Layout Spacing Fixes */
+.layout-container {
+  display: flex;
+  min-height: 100vh;
+  background-color: #f8fafc;
+}
+
+.main-content-fixed {
+  flex: 1;
+  min-width: 0;
+  padding-left: 0;
+}
+
+/* Mobile Layout Improvements */
+@media (max-width: 1023px) {
+  .sidebar-mobile {
+    width: 0;
+  }
+  
+  .main-content-fixed {
+    padding-left: 0;
+    width: 100%;
+  }
+}
+
+/* Desktop Layout with proper sidebar spacing */
+@media (min-width: 1024px) {
+  .main-content-fixed {
+    margin-left: 256px;
+    width: calc(100% - 256px);
+  }
+}
+
+/* Mobile header spacing fix */
+.mobile-header-spacing {
+  padding-top: 4rem; /* 64px for mobile header */
+}
+
+@media (min-width: 1024px) {
+  .mobile-header-spacing {
+    padding-top: 0;
+  }
+}
+
+/* Button ghost variant for mobile navigation */
+.btn-ghost {
+  background-color: transparent;
+  color: #374151;
+  border: none;
+}
+
+.btn-ghost:hover {
+  background-color: #f3f4f6;
+}
+
+.btn-ghost:focus {
+  outline: 2px solid #6b7280;
+  outline-offset: 2px;
+}
