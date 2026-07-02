@@ -1,282 +1,104 @@
-https://pediatri.netlify.app/ (Live Web App)
+# 🩺 Pediatrik Klinik Asistanı & Semiyoloji Rehberi
 
-# 🩺 Pediatrik Semiyoloji Rehberi
+> Hekimler, asistanlar ve tıp öğrencileri için pediatri rotasyonlarında ve acil nöbetlerinde kullanılmak üzere tasarlanmış kapsamlı, interaktif ve kanıta dayalı klinik karar destek aracı.
 
-> Pediatrik semiyoloji için kapsamlı, kanıta dayalı rehber uygulaması
+[![Live App](https://img.shields.io/badge/Live-Uygulama-teal.svg?style=for-the-badge)](https://pediatri.netlify.app/)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-blue.svg?style=for-the-badge)](https://github.com/Baro007/pediatri)
+[![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)](LICENSE)
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/pediatri-rehber/web-app)
-[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![React](https://img.shields.io/badge/React-19.1.0-61DAFB.svg)](https://reactjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.8.3-3178C6.svg)](https://www.typescriptlang.org/)
-[![Vite](https://img.shields.io/badge/Vite-4.5.14-646CFF.svg)](https://vitejs.dev/)
+---
 
-## 📋 İçerik
+## 👨‍⚕️ Geliştirici ve Proje Hakkında
 
-- [Özellikler](#-özellikler)
-- [Kurulum](#-kurulum)
-- [Kullanım](#-kullanım)
-- [Geliştirme](#-geliştirme)
-- [Deployment](#-deployment)
-- [Katkıda Bulunma](#-katkıda-bulunma)
-- [Lisans](#-lisans)
+Bu proje, **Dr. Sadık Barış Adıgüzel** (Antalya Eğitim ve Araştırma Hastanesi, Aile Hekimliği Asistanı) tarafından, pediatri klinik rotasyonu esnasında edinilen teorik ve pratik bilgileri pekiştirmek ve nöbetlerde hızlı klinik karar vermeyi desteklemek amacıyla geliştirilmiştir. 
 
-## ✨ Özellikler
+Projenin temel amacı; tüm hekim meslektaşların, asistanların ve tıp öğrencilerinin acilde ya da poliklinikte pediatrik hastaları değerlendirirken kılavuzlara ve hesaplama araçlarına saniyeler içinde ulaşabilmesini sağlamaktır. Proje **tamamen açık kaynak kodlu** olup meslektaşların katkılarına açıktır.
 
-### 🎯 Klinik Araçlar
-- **Klinik Senaryolar**: Yaş gruplarına özel vaka analizleri
-- **Sistem Muayeneleri**: Detaylı fizik muayene rehberleri
-- **Doz Hesaplayıcısı**: Pediatrik doz hesaplama araçları
-- **Vital Signs**: Yaş gruplarına göre normal değerler
+* **Web Sitesi:** [dr.sadikbarisadiguzel.com](https://dr.sadikbarisadiguzel.com/)
+* **LinkedIn:** [linkedin.com/in/sadikbarisadiguzel](https://linkedin.com/in/sadikbarisadiguzel)
 
-### 📊 Gelişim Takibi
-- **Milestone Tracking**: Gelişim basamakları izlemi
-- **Büyüme Eğrileri**: Percentile hesaplamaları
-- **Davranış Değerlendirmesi**: ADHD, OSB screening araçları
-- **Beslenme Rehberi**: FTT değerlendirmesi ve kalori hesaplama
+---
 
-### 🔍 Tanı Destekleri
-- **Diferansiyel Tanı**: Yaş gruplarına özel ayırıcı tanı
-- **Red Flag Uyarıları**: Kritik bulguların tanınması
-- **Clinical Pearls**: Praktik ipuçları ve püf noktaları
-- **Döküntü Haritası**: Anatomik bölgelere göre tanı rehberi
+## ✨ Temel Özellikler
 
-### 💻 Teknik Özellikler
-- **PWA Desteği**: Offline çalışabilir, yüklenebilir
-- **Responsive Design**: Mobil, tablet ve desktop uyumlu
-- **Code Splitting**: Hızlı yükleme ve performans
-- **Error Handling**: Kapsamlı hata yönetimi
-- **Accessibility**: Erişilebilirlik standartları
+### 1. ⚙️ İnteraktif Doz Hesaplayıcı
+* **Geniş İlaç Veritabanı:** Parasetamol ve Ibuprofen'den başlayarak poliklinik ve acillerin vazgeçilmezleri olan *Salbutamol (şurup & nebül), Deksametazon (Krup steroidi), Oral Rehidratasyon Sıvısı (ORS), Ondansetron (antiemetik)* ve yaygın pediatrik antibiyotiklerin (Amoksisilin-Klavulanat, Sefuroksim vb.) pediatrik dozlarını hesaplar.
+* **Akıllı Formül Desteği:** İlacın cinsine göre mg/kg/doz, mg/kg/gün veya statik (Budesonid 2mg, Vitamin D 1 damla gibi) bazda dozajlama yaparak ml ve ölçek cinsinden tam sonuç verir.
+* **Zustand Persistence:** Girilen hasta kilosu ve hesaplama sonuçları tarayıcı belleğinde kalıcı olarak saklanır, sayfalar arası geçişlerde veri kaybı yaşanmaz.
 
-## 🚀 Kurulum
+### 2. 🫁 Sistem Muayeneleri Kılavuzu
+* Solunum, Kardiyovasküler, Gastrointestinal, Genitoüriner, Nörolojik, Kas-İskelet ve Dermatolojik muayenelerin pediatrik hastalardaki spesifik uygulama adımları ve yorumlama kılavuzları.
+* Yaş gruplarına göre normal değerler ve patolojik bulgu ipuçları.
 
-### Gereksinimler
-- Node.js 18.0.0 veya üzeri
-- npm 9.0.0 veya üzeri
+### 3. 👶 Gelişim Takibi & Milestone İzlemi
+* WHO ve pediatri standartlarına uygun olarak 3. aydan 5. yaşa kadar motor, dil, bilişsel ve sosyal gelişim basamakları.
+* Hekimin gelişim basamaklarını işaretleyebileceği kalıcı (Zustand/LocalStorage) kontrol listeleri.
+* Tek tıkla yeni hasta muayenesine başlamak için **"Muayeneyi Sıfırla"** özelliği.
 
-### Adımlar
+### 4. 🏥 Klinik Senaryolar & Karar Algoritmaları
+* Ateş, Öksürük, Topallama, Nöbet gibi acil durumlara sistematik yaklaşım basamakları.
+* **İnteraktif Karın Ağrısı Tanı Aracı:** Yaş gruplarına özel (Bebek, Okul Öncesi, Okul Çağı, Adolesan) ayırıcı tanılar ve *McBurney, Rovsing, Psoas, Obturator, Rebound (Blumberg) ve Dance Sign* muayene tekniklerinin adım adım uygulanış rehberi.
+* **Döküntü Dağılım Haritası:** Yüz, Gövde, El-Ayak Palmerleri vb. vücut bölgelerine göre döküntüleri süzebilen interaktif modül ve Kızamık, Kızıl, Suçiçeği gibi döküntülü hastalıkların ayırıcı ipuçları.
 
-1. **Projeyi klonlayın**
+---
+
+## 💻 Teknolojik Altyapı
+
+* **Framework:** React 19 + TypeScript (Strict Mode)
+* **Build Tool:** Vite
+* **Styling:** TailwindCSS 3
+* **State Management:** Zustand + LocalStorage Persistence
+* **Build / Deploy:** Netlify
+
+---
+
+## 🚀 Yerel Kurulum
+
+Projeyi kendi bilgisayarınızda çalıştırmak veya geliştirmek için aşağıdaki adımları takip edebilirsiniz:
+
+1. **Depoyu klonlayın:**
    ```bash
-   git clone https://github.com/pediatri-rehber/web-app.git
-   cd pediatri-app
+   git clone https://github.com/Baro007/pediatri.git
+   cd pediatri
    ```
 
-2. **Bağımlılıkları yükleyin**
+2. **Bağımlılıkları yükleyin:**
    ```bash
    npm install
    ```
 
-3. **Environment dosyasını oluşturun**
-   ```bash
-   cp .env.example .env
-   ```
-
-4. **Geliştirme sunucusunu başlatın**
+3. **Geliştirme sunucusunu başlatın:**
    ```bash
    npm run dev
    ```
+   Uygulama tarayıcınızda otomatik olarak `http://localhost:3000` adresinde açılacaktır.
 
-5. **Tarayıcıda açın**
-   ```
-   http://localhost:3000
-   ```
-
-## 📖 Kullanım
-
-### Ana Bölümler
-
-#### 🏠 Ana Sayfa
-- Hızlı erişim widget'ları
-- Son güncellemeler
-- Sık kullanılan araçlar
-
-#### 🎯 Klinik Senaryolar
-- Ateş değerlendirmesi
-- Karın ağrısı tanısı
-- Döküntü değerlendirmesi
-- Başağrısı ayırıcı tanısı
-- Nöbet yönetimi
-
-#### 📏 Gelişim Takibi
-- Yaş gruplarına özel milestone'lar
-- Büyüme percentile hesaplamaları
-- Davranış screening araçları
-- Beslenme değerlendirmesi
-
-#### 🔬 Sistem Muayeneleri
-- Kardiyovasküler sistem
-- Solunum sistemi
-- Gastrointestinal sistem
-- Nörolojik sistem
-- Genitüriner sistem
-- Kas-iskelet sistemi
-
-#### ⚡ Hızlı Referans
-- Doz hesaplayıcısı
-- Vital signs tablosu
-- Acil durum algoritmaları
-- İlaç dozları
-
-## 🛠 Geliştirme
-
-### Teknoloji Stack
-- **Frontend**: React 19.1.0, TypeScript 5.8.3
-- **Build Tool**: Vite 4.5.14
-- **Styling**: TailwindCSS 3.4.17
-- **State Management**: Zustand 5.0.6
-- **Routing**: React Router 6.30.1
-- **Charts**: Chart.js 4.5.0
-- **UI Components**: Headless UI 2.2.4
-
-### Geliştirme Komutları
-
-```bash
-# Geliştirme sunucusu
-npm run dev
-
-# Production build
-npm run build
-
-# Build önizlemesi
-npm run preview
-
-# Linting
-npm run lint
-
-# Type checking
-npm run type-check
-```
-
-### Proje Yapısı
-
-```
-src/
-├── components/          # Reusable components
-│   ├── ui/             # Base UI components
-│   ├── medical/        # Medical-specific components
-│   └── layout/         # Layout components
-├── pages/              # Page components
-├── data/               # Medical data and scenarios
-├── types/              # TypeScript type definitions
-├── hooks/              # Custom React hooks
-├── utils/              # Utility functions
-└── services/           # API services
-```
-
-### Kod Kalitesi
-
-- **TypeScript**: Strict mode etkin
-- **ESLint**: Kod kalitesi kontrolü
-- **Prettier**: Kod formatlama
-- **Error Boundary**: Hata yakalama
-- **Accessibility**: WCAG 2.1 AA uyumlu
-
-## 🌍 Deployment
-
-### Vercel Deployment
-
-1. **Vercel CLI yükleyin**
+4. **Derleme Kontrolleri:**
    ```bash
-   npm i -g vercel
+   npm run type-check   # TypeScript kontrolü
+   npm run build        # Production derlemesi
    ```
 
-2. **Deploy edin**
-   ```bash
-   vercel --prod
-   ```
+---
 
-### Netlify Deployment
+## 🤝 Katkıda Bulunma (Open Source Contribution)
 
-1. **Build edin**
-   ```bash
-   npm run build
-   ```
+Uygulamanın klinik içeriğini zenginleştirmek veya kod tabanını geliştirmek için katkılarınızı memnuniyetle bekliyoruz!
 
-2. **Netlify'a yükleyin**
-   ```bash
-   npm install -g netlify-cli
-   netlify deploy --prod --dir=dist
-   ```
+1. Bu depoyu fork edin.
+2. Yeni bir özellik dalı oluşturun (`git checkout -b feature/yeni-ozellik`).
+3. Değişikliklerinizi commit edin (`git commit -m 'Eklendi: [Özellik Açıklaması]'`).
+4. Dalınızı push edin (`git push origin feature/yeni-ozellik`).
+5. Bir Pull Request oluşturun.
 
-### Environment Variables
+---
 
-Production için gerekli environment variables:
+## ⚠️ Önemli Tıbbi Uyarı (Medical Disclaimer)
 
-```bash
-VITE_APP_NAME=Pediatrik Semiyoloji Rehberi
-VITE_APP_VERSION=1.0.0
-VITE_APP_URL=https://pediatri-rehber.com
-VITE_ENABLE_ANALYTICS=true
-VITE_ENABLE_SERVICE_WORKER=true
-```
-
-## 📊 Performance
-
-### Lighthouse Scores (Target)
-- **Performance**: 95+
-- **Accessibility**: 100
-- **Best Practices**: 100
-- **SEO**: 100
-
-### Optimizasyonlar
-- Code splitting ve lazy loading
-- Tree shaking
-- Bundle analizi
-- Image optimization
-- Service worker caching
-
-## 🤝 Katkıda Bulunma
-
-Katkılarınızı bekliyoruz! Lütfen katkıda bulunmadan önce:
-
-1. Fork edin
-2. Feature branch oluşturun (`git checkout -b feature/amazing-feature`)
-3. Commit edin (`git commit -m 'Add amazing feature'`)
-4. Push edin (`git push origin feature/amazing-feature`)
-5. Pull Request oluşturun
-
-### Geliştirme Kuralları
-- TypeScript kullanın
-- ESLint kurallarına uyun
-- Testler yazın
-- Accessibility standartlarına uyun
-- Mobile-first yaklaşım
-
-## 📝 Changelog
-
-### v1.0.0 (2024-01-XX)
-- ✨ İlk release
-- 🎯 Klinik senaryolar sistemi
-- 📊 Gelişim takibi araçları
-- 🔧 Doz hesaplayıcısı
-- 📱 PWA desteği
-- ♿ Accessibility iyileştirmeleri
-
-## 🐛 Bilinen Sorunlar
-
-Şu anda bilinen bir sorun bulunmamaktadır. Sorun bulduğunuzda lütfen [issue açın](https://github.com/pediatri-rehber/web-app/issues).
-
-## 📄 Lisans
-
-Bu proje MIT lisansı altında lisanslanmıştır. Detaylar için [LICENSE](LICENSE) dosyasına bakınız.
-
-## 👥 Ekip
-
-- **Lead Developer**: [İsim](https://github.com/username)
-- **Medical Consultant**: [İsim](https://github.com/username)
-- **UI/UX Designer**: [İsim](https://github.com/username)
-
-## 🙏 Teşekkürler
-
-Bu proje aşağıdaki kaynaklar ve katkıcılar sayesinde geliştirilmiştir:
-
-- Türk Pediatri Derneği rehberleri
-- WHO çocuk gelişimi standartları
-- AAP (American Academy of Pediatrics) guidelines
-- Açık kaynak topluluğu
+Bu uygulama hekimlerin klinik pratiklerine destek olmak ve tıp eğitimi amacıyla geliştirilmiş bir klinik karar destek aracıdır. **Uygulamada yer alan hesaplamalar, dozlar ve algoritmalar yalnızca rehber niteliğindedir. Tedavi uygulayan hekimin klinik kararı ve sorumluluğu esastır.** İlaç dozları uygulanmadan önce güncel ulusal pediatri kılavuzları ve prospektüs bilgileri ile doğrulanmalıdır.
 
 ---
 
 <p align="center">
-  Türkiye'deki pediatri eğitimi ve pratiği için ❤️ ile geliştirilmiştir
+  Antalya Eğitim ve Araştırma Hastanesi - Aile Hekimliği Kliniği bünyesinde ❤️ ve özenle geliştirilmiştir.
 </p>

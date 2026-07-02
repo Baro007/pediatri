@@ -85,5 +85,60 @@ export const drugData: DrugData[] = [
     dose: [1],
     unit: 'damla/gün',
     notes: 'Sağlıklı bebeklerde profilaksi için.'
+  },
+  {
+    name: 'Salbutamol Şurup (2mg/5ml)',
+    category: 'Bronkodilatör',
+    dose: [0.1, 0.2],
+    unit: 'mg/kg/doz',
+    concentration: 2/5,
+    notes: 'Günde 3-4 kez. Tremor ve taşikardi yan etkisi olabilir.'
+  },
+  {
+    name: 'Salbutamol Nebül (2.5mg/2.5ml)',
+    category: 'Bronkodilatör',
+    dose: [0.1, 0.15],
+    unit: 'mg/kg/doz',
+    concentration: 1,
+    notes: 'Nebülizasyon şeklinde. Akut astım atağı. Maks: 5 mg (2 nebül).'
+  },
+  {
+    name: 'Deksametazon Ampul (4mg/ml)',
+    category: 'Steroid',
+    dose: [0.6],
+    unit: 'mg/kg/doz',
+    concentration: 4,
+    notes: 'Özellikle Krup sendromunda tek doz PO veya IM/IV. Maks: 16 mg.'
+  },
+  {
+    name: 'Oral Rehidratasyon Sıvısı (ORS)',
+    category: 'Rehidratasyon',
+    dose: [50, 100],
+    unit: 'ml/kg',
+    notes: 'Hafif-orta dehidratasyonda ilk 4 saatte yudum yudum. İshal/kusma sonrası 5-10 ml/kg ekle.'
+  },
+  {
+    name: 'Ondansetron Ampul (4mg/2ml)',
+    category: 'Antiemetik',
+    dose: [0.15],
+    unit: 'mg/kg/doz',
+    concentration: 2,
+    notes: 'Gastroenterit kusmalarında ORS öncesi tek doz. Maks: 8 mg.'
+  },
+  {
+    name: 'Sefuroksim Aksetil (125mg/5ml)',
+    category: 'Antibiyotik',
+    dose: [20, 30],
+    unit: 'mg/kg/gün',
+    concentration: 125/5,
+    notes: '2 doza bölünerek. İdrar yolu enfeksiyonu, otitis media.'
+  },
+  {
+    name: 'Sefaleksin (250mg/5ml)',
+    category: 'Antibiyotik',
+    dose: [25, 50],
+    unit: 'mg/kg/gün',
+    concentration: 250/5,
+    notes: '2-4 doza bölünerek. Cilt ve yumuşak doku enfeksiyonları, İYE.'
   }
 ]; 

@@ -108,10 +108,10 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
       {/* Sidebar */}
       <aside
         className={clsx(
-          'fixed top-0 left-0 bottom-0 z-50 w-64 bg-white shadow-lg border-r border-slate-200',
+          'fixed top-0 left-0 bottom-0 z-50 w-64 bg-white border-r border-slate-200',
           'transform transition-transform duration-300 ease-in-out',
-          'lg:transform-none lg:static lg:shadow-none',
-          isOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'
+          'lg:translate-x-0 lg:shadow-none',
+          isOpen ? 'translate-x-0' : '-translate-x-full'
         )}
       >
         <div className="h-full flex flex-col">
@@ -187,9 +187,12 @@ export const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </nav>
 
           {/* Footer */}
-          <div className="p-4 border-t border-slate-200">
-            <p className="text-xs text-slate-500 text-center">
+          <div className="p-4 border-t border-slate-200 bg-slate-50 text-center">
+            <p className="text-xs text-slate-500 font-semibold mb-1">
               v1.0.0 - Pediatrik Semiyoloji
+            </p>
+            <p className="text-[10px] text-slate-400">
+              Geliştiren: <a href="https://dr.sadikbarisadiguzel.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 hover:underline font-medium">Dr. S. Barış Adıgüzel</a>
             </p>
           </div>
         </div>

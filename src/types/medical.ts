@@ -2,7 +2,7 @@
 
 export interface DrugData {
   name: string;
-  category: 'Antipiretik' | 'Antibiyotik' | 'Antihistaminik' | 'Steroid' | 'Vitamin';
+  category: 'Antipiretik' | 'Antibiyotik' | 'Antihistaminik' | 'Steroid' | 'Vitamin' | 'Bronkodilatör' | 'Rehidratasyon' | 'Antiemetik';
   dose: number[];
   unit: string;
   concentration?: number;
@@ -213,4 +213,11 @@ export interface AssessmentTool {
   purpose: string;
   steps: string[];
   interpretation: string[];
+}
+
+export interface MilestoneCheck {
+  milestone: string;
+  achieved: boolean;
+  ageAchieved?: string;
+  notes?: string;
 } 

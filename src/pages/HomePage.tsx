@@ -154,7 +154,10 @@ const HomePage: React.FC = () => {
         <p className="text-slate-500 mb-2">
           Bu araç eğitim amaçlıdır ve tıbbi kararlarınızda yalnızca destekleyici bir rehber olarak kullanılmalıdır.
         </p>
-        <p className="text-sm text-slate-400">
+        <p className="text-xs text-slate-400">
+          Geliştiren ve Künye: <a href="https://dr.sadikbarisadiguzel.com/" target="_blank" rel="noopener noreferrer" className="text-teal-600 hover:text-teal-700 hover:underline font-bold">Dr. Sadık Barış Adıgüzel</a>
+        </p>
+        <p className="text-[10px] text-slate-400 mt-2">
           Versiyon 1.0.0 - Son güncelleme: {new Date().toLocaleDateString('tr-TR')}
         </p>
       </div>
